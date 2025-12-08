@@ -13,3 +13,5 @@ Tnominal_mensual =float (Tnominal_anual/12)
 #Pago 1
 Fecha_pagar= (Fecha + relativedelta(months=1))
 print(Fecha_pagar) 
+
+prueba_si_funciona.
