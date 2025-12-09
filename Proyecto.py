@@ -1,7 +1,7 @@
 Usuario = input("ingresar el nombre del usuario: ").lower()
 Monto = float(input("Ingrese el monto a cobrar: "))
 from datetime import datetime
-fecha = input("Ingrse la fecha inicial: ")
+fecha = input("Ingrese la fecha inicial: ")
 fecha_inicial = datetime.strptime(fecha, "%d/%m/%Y")
 dia_paga = fecha_inicial.day
 mes_paga = fecha_inicial.month + 1
@@ -41,13 +41,13 @@ for i in range(Numero_pagos):
     mes_real = fecha_real.month
     año_real = fecha_real.year
     monto_pagado = float(input("Ingrese cuánto pagó este mes: "))
-    if Monto != monto_pagado:
+    monto_total = monto_pagado - Monto
+    if Monto != monto_total:
         while monto_pagado != (Numero_pagos):
             fecha_pagar = datetime(año_paga, mes_paga, dia_paga)
             fecha_real = input("Ingrese la fecha en que pagó (dd/mm/yyyy): ")
             days=0
             monto_pagado = float(input("Ingrese cuánto pagó este mes: "))
     else:
-        print ("Usted ha saldado su deuda")
-
+        print ("Usted ha saldado su deuda con la sociedad")
             
